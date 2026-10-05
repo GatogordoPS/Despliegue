@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía GitHub Pages</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="container">
+        <span class="tag">TUTORIAL · GITHUB</span>
+        <h1>Publicar una aplicación con GitHub Pages</h1>
+        <p>
+            Guía rápida para subir un proyecto a GitHub y publicarlo
+            como una página web mediante GitHub Pages.
+        </p>
+    </div>
+</header>
+
+<main class="container">
+
+    <section class="intro">
+        <span class="number">01</span>
+        <div>
+            <h2>¿Qué es GitHub Pages?</h2>
+            <p>
+                GitHub Pages es un servicio de GitHub que permite publicar
+                páginas web directamente desde un repositorio.
+            </p>
+
+            <div class="flow">
+                <div>Proyecto</div>
+                <span>→</span>
+                <div>Git</div>
+                <span>→</span>
+                <div>GitHub</div>
+                <span>→</span>
+                <div>GitHub Pages</div>
+                <span>→</span>
+                <div>Web pública</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="step">
+        <div class="step-header">
+            <span class="number">02</span>
+            <div>
+                <h2>Preparar el proyecto</h2>
+                <p>
+                    Antes de publicarlo debemos asegurarnos de que el proyecto
+                    contiene un archivo <strong>index.html</strong>.
+                </p>
+            </div>
+        </div>
+
+        <div class="code">
+            <pre><code>mi-proyecto/
+│
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── script.js
+└── img/
+    └── imagen.jpg</code></pre>
+        </div>
+
+        <div class="note">
+            <strong>Importante:</strong>
+            GitHub Pages utilizará <code>index.html</code> como página principal.
+        </div>
+    </section>
+
+    <section class="step">
+        <div class="step-header">
+            <span class="number">03</span>
+            <div>
+                <h2>Crear el repositorio</h2>
+                <p>El proyecto debe estar almacenado en un repositorio de GitHub.</p>
+            </div>
+        </div>
+
+        <ol>
+            <li>Acceder a GitHub.</li>
+            <li>Pulsar <strong>New repository</strong>.</li>
+            <li>Introducir el nombre del proyecto.</li>
+            <li>Seleccionar <strong>Public</strong>.</li>
+            <li>Pulsar <strong>Create repository</strong>.</li>
+        </ol>
+    </section>
+
+    <section class="step">
+        <div class="step-header">
+            <span class="number">04</span>
+            <div>
+                <h2>Subir el proyecto a GitHub</h2>
+                <p>
+                    Desde la terminal podemos inicializar Git y enviar
+                    nuestro proyecto al repositorio.
+                </p>
+            </div>
+        </div>
+
+        <div class="command">
+            <span>1</span>
+            <code>git init</code>
+        </div>
+
+        <div class="command">
+            <span>2</span>
+            <code>git add .</code>
+        </div>
+
+        <div class="command">
+            <span>3</span>
+            <code>git commit -m "Primer commit"</code>
+        </div>
+
+        <div class="command">
+            <span>4</span>
+            <code>git remote add origin URL_DEL_REPOSITORIO</code>
+        </div>
+
+        <div class="command">
+            <span>5</span>
+            <code>git branch -M main</code>
+        </div>
+
+        <div class="command">
+            <span>6</span>
+            <code>git push -u origin main</code>
+        </div>
+    </section>
+
+    <section class="step highlight">
+        <div class="step-header">
+            <span class="number">05</span>
+            <div>
+                <h2>Configurar GitHub Pages</h2>
+                <p>
+                    Ahora activaremos GitHub Pages para publicar el proyecto.
+                </p>
+            </div>
+        </div>
+
+        <div class="path">
+            <span>GitHub</span>
+            <b>→</b>
+            <span>Repository</span>
+            <b>→</b>
+            <span>Settings</span>
+            <b>→</b>
+            <span>Pages</span>
+        </div>
+
+        <ol>
+            <li>Entrar en el repositAorio.</li>
+            <li>Abrir <strong>Settings</strong>.</li>
+            <li>Seleccionar <strong>Pages</strong> en el menú lateral.</li>
+            <li>Buscar <strong>Build and deployment</strong>.</li>
+            <li>Seleccionar <strong>Deploy from a branch</strong>.</li>
+            <li>Seleccionar la rama <strong>main</strong>.</li>
+            <li>Seleccionar la carpeta <strong>/ (root)</strong>.</li>
+            <li>Pulsar <strong>Save</strong>.</li>
+        </ol>
+    </section>
+
+    <section class="step">
+        <div class="step-header">
+            <span class="number">06</span>
+            <div>
+                <h2>Comprobar la publicación</h2>
+                <p>
+                    GitHub comenzará automáticamente el proceso de publicación.
+                </p>
+            </div>
+        </div>
+
+        <div class="status">
+            <div class="status-dot"></div>
+            <div>
+                <strong>Tu sitio está siendo publicado</strong>
+                <p>
+                    Cuando finalice el proceso, GitHub mostrará el enlace
+                    a la página publicada.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="step">
+        <div class="step-header">
+            <span class="number">07</span>
+            <div>
+                <h2>Aplicación publicada</h2>
+                <p>
+                    Una vez completada la configuración podremos acceder
+                    a la aplicación desde cualquier navegador.
+                </p>
+            </div>
+        </div>
+
+        <div class="url-box">
+            <span>URL DE LA APLICACIÓN</span>
+
+            <a href="#" target="_blank">
+                https://TU-USUARIO.github.io/TU-REPOSITORIO/
+            </a>
+        </div>
+
+        <p class="small">
+            Sustituye la dirección anterior por la URL real de tu proyecto.
+        </p>
+    </section>
+
+    <section class="step">
+        <div class="step-header">
+            <span class="number">08</span>
+            <div>
+                <h2>Actualizar la aplicación</h2>
+                <p>
+                    Cuando realicemos cambios en el proyecto, podemos
+                    actualizar GitHub Pages utilizando Git.
+                </p>
+            </div>
+        </div>
+
+        <div class="code">
+            <pre><code>git add .
+git commit -m "Actualizacion de la aplicacion"
+git push</code></pre>
+        </div>
+
+        <p>
+            Después del <strong>push</strong>, GitHub actualizará
+            automáticamente la página publicada.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>GitHub Pages · Tutorial de publicación web</p>
+    </div>
+</footer>
+
+</body>
+</html>
